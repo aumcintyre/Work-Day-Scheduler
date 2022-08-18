@@ -32,7 +32,8 @@ $(document).ready(function () {
 $(".saveBtn").click(function (event){
     console.log("hello");
     event.preventDefault();
-    let tasks = $(this)
+    let tasks = $(this).siblings(hourBlock).val;
+    localStorage.setItem(tasks)
 });
 //Just to remember the format
 //dayjs().format()
