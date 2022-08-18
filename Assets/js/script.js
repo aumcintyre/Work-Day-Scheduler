@@ -24,14 +24,11 @@ $(document).ready(function () {
     }
 });
 
-//Add event listener to click button to grab the time and the text area value and save them to local storage.
+});
+//Add event listener to click button to grab the time and the text area value and save them to local storage. 
+
 $(".saveBtn").click(function (event){
-console.log("hello");
-}
-
-
-);
-
-
+    console.log("hello");
+});
 //Just to remember the format
 //dayjs().format()
