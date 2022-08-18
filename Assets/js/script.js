@@ -1,4 +1,4 @@
-var currentDate = dayjs().format("dddd, MMM Do YYYY");
+var currentDate = dayjs().format("dddd, MMM Do YYYY: h:mm a");
 var todayDate = document.getElementById("currentDay");
 var currentHour = dayjs().format("HH")
 
@@ -16,10 +16,8 @@ $(document).ready(function () {
     if (currentHour === hourBlock) {
         $(this).addClass("present");
     } else if (currentHour <= hourBlock) {
-        $(this).removeClass("present");
         $(this).addClass("future");
     } else if (currentHour >= hourBlock) {
-        $(this).removeClass("future");
         $(this).addClass("past");
     }
 });
@@ -32,8 +30,9 @@ $(document).ready(function () {
 $(".saveBtn").click(function (event){
     console.log("hello");
     event.preventDefault();
-    let tasks = $(this).siblings(hourBlock).val;
-    localStorage.setItem(tasks)
+    let tasks = $(this).siblings(".description").val();
+    let time = $(this).parents().attr("id").split("-")[1];
+    localStorage.setItem(tasks, time)
 });
 //Just to remember the format
 //dayjs().format()
