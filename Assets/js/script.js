@@ -27,8 +27,12 @@ $(document).ready(function () {
 });
 //Add event listener to click button to grab the time and the text area value and save them to local storage. 
 
+//how do I call the correct areas of the div???
+
 $(".saveBtn").click(function (event){
     console.log("hello");
+    event.preventDefault();
+    let tasks = $(this)
 });
 //Just to remember the format
 //dayjs().format()
