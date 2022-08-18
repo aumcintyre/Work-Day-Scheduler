@@ -7,7 +7,7 @@ todayDate.innerText = (currentDate);
 //Ready function allows the entire page to load before a DOM element is manipulated
 $(document).ready(function () {
    
-//Find each hour's div and assign it a time by splitting the id into two parts and using the second part which lines up with the hour value
+//Find each hour's div and assign it a time by splitting the id into two items on an index and using the second item [1] which lines up with the hour value
     $(".hourBlock").each(function () {
     var hourBlock = $(this).attr("id").split("-")[1];
 
