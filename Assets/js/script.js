@@ -22,7 +22,7 @@ $(document).ready(function () {
     }
 });
 
-});
+
 //Add event listener to click button to grab the time and the text area value and save them to local storage. 
 
 //how do I call the correct areas of the div???
@@ -33,6 +33,10 @@ $(".saveBtn").on('click', function (event){
     let tasks = $(this).siblings(".description").val();
     let time = $(this).parents().attr("id").split("-")[1];
     localStorage.setItem(tasks, time)
+});
+
+//Retrieve locally stored variables and display them in the hour blocks when the page refreshes -- currently, nothing happens
+$("#hour-09 .description").val(localStorage.getItem("09"));
 });
 //Just to remember the format
 //dayjs().format()
