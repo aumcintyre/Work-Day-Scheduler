@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 //how do I call the correct areas of the div???
 
-$(".saveBtn").click(function (event){
+$(".saveBtn").on('click', function (event){
     console.log("hello");
     event.preventDefault();
     let tasks = $(this).siblings(".description").val();
