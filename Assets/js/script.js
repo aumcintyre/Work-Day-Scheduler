@@ -37,6 +37,14 @@ $(".saveBtn").on('click', function (event){
 
 //Retrieve locally stored variables and display them in the hour blocks when the page refreshes -- currently, nothing happens
 $("#hour-09 .description").val(localStorage.getItem("09"));
+$("#hour-10 .description").val(localStorage.getItem("10"));
+$("#hour-11 .description").val(localStorage.getItem("11"));
+$("#hour-12 .description").val(localStorage.getItem("12"));
+$("#hour-13 .description").val(localStorage.getItem("13"));
+$("#hour-14 .description").val(localStorage.getItem("14"));
+$("#hour-15 .description").val(localStorage.getItem("15"));
+$("#hour-16 .description").val(localStorage.getItem("16"));
+$("#hour-17 .description").val(localStorage.getItem("17"));
 });
 //Just to remember the format
 //dayjs().format()
