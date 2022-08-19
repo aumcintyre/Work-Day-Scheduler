@@ -32,7 +32,7 @@ $(".saveBtn").on('click', function (event){
     event.preventDefault();
     let tasks = $(this).siblings(".description").val();
     let time = $(this).parents().attr("id").split("-")[1];
-    localStorage.setItem(tasks, time)
+    localStorage.setItem(time, tasks)
 });
 
 //Retrieve locally stored variables and display them in the hour blocks when the page refreshes -- currently, nothing happens
